@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "ec2": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/",
+    "aws": "https://aws.amazon.com/",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "identifier": "schema:identifier",
+    "dateCreated": "schema:dateCreated",
+    "dateModified": "schema:dateModified",
+    "status": "schema:status",
+    "provider": {
+      "@id": "schema:provider",
+      "@type": "schema:Organization"
+    },
+    "TransitGateway": {
+      "@id": "ec2:API_CreateTransitGateway.html",
+      "@context": {
+        "TransitGatewayId": "schema:identifier",
+        "TransitGatewayArn": "schema:identifier",
+        "State": "schema:status",
+        "Description": "schema:description",
+        "OwnerId": "ec2:OwnerId",
+        "CreationTime": "schema:dateCreated"
+      }
+    },
+    "TransitGatewayAttachment": {
+      "@id": "ec2:API_CreateTransitGatewayVpcAttachment.html",
+      "@context": {
+        "TransitGatewayAttachmentId": "schema:identifier",
+        "TransitGatewayId": "ec2:TransitGatewayId",
+        "VpcId": "ec2:VpcId",
+        "State": "schema:status",
+        "CreationTime": "schema:dateCreated"
+      }
+    },
+    "TransitGatewayRouteTable": {
+      "@id": "ec2:API_CreateTransitGatewayRouteTable.html",
+      "@context": {
+        "TransitGatewayRouteTableId": "schema:identifier",
+        "TransitGatewayId": "ec2:TransitGatewayId",
+        "State": "schema:status",
+        "CreationTime": "schema:dateCreated"
+      }
+    },
+    "Tag": {
+      "@id": "ec2:Tag",
+      "@context": {
+        "Key": "schema:name",
+        "Value": "schema:value"
+      }
+    }
+  }
+}

@@ -1,0 +1,229 @@
+openapi: 3.1.0
+info:
+  title: Amazon Transit Gateway API
+  description: >-
+    Amazon Transit Gateway connects VPCs and on-premises networks through a
+    central hub. This API provides operations for creating and managing transit
+    gateways, VPC attachments, route tables, peering connections, and
+    multicast domains via the EC2 API.
+  version: '2016-11-15'
+  contact:
+    name: Amazon Web Services
+    url: https://aws.amazon.com/transit-gateway/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+externalDocs:
+  description: Amazon Transit Gateway API Reference
+  url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html
+servers:
+  - url: https://ec2.{region}.amazonaws.com
+    description: Amazon EC2 regional endpoint (Transit Gateway operations)
+    variables:
+      region:
+        default: us-east-1
+        description: AWS region
+        enum:
+          - us-east-1
+          - us-east-2
+          - us-west-1
+          - us-west-2
+          - eu-west-1
+          - eu-west-2
+          - eu-west-3
+          - eu-central-1
+          - eu-north-1
+          - ap-northeast-1
+          - ap-northeast-2
+          - ap-southeast-1
+          - ap-southeast-2
+          - ap-south-1
+          - sa-east-1
+          - ca-central-1
+paths:
+  /?Action=CreateTransitGateway:
+    get:
+      operationId: CreateTransitGateway
+      summary: Create a transit gateway
+      description: Creates a transit gateway to interconnect VPCs and on-premises networks.
+      tags:
+        - Transit Gateways
+      parameters:
+        - name: Action
+          in: query
+          required: true
+          schema:
+            type: string
+            enum:
+              - CreateTransitGateway
+        - name: Description
+          in: query
+          schema:
+            type: string
+        - name: Options.AmazonSideAsn
+          in: query
+          schema:
+            type: integer
+            format: int64
+        - name: Options.AutoAcceptSharedAttachments
+          in: query
+          schema:
+            type: string
+            enum:
+              - enable
+              - disable
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            text/xml:
+              schema:
+                type: object
+                properties:
+                  transitGateway:
+                    $ref: '#/components/schemas/TransitGateway'
+  /?Action=DescribeTransitGateways:
+    get:
+      operationId: DescribeTransitGateways
+      summary: Describe transit gateways
+      description: Describes one or more transit gateways.
+      tags:
+        - Transit Gateways
+      parameters:
+        - name: Action
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: TransitGatewayId
+          in: query
+          schema:
+            type: array
+            items:
+              type: string
+        - name: MaxResults
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response.
+  /?Action=DeleteTransitGateway:
+    get:
+      operationId: DeleteTransitGateway
+      summary: Delete a transit gateway
+      description: Deletes the specified transit gateway.
+      tags:
+        - Transit Gateways
+      parameters:
+        - name: Action
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: TransitGatewayId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response.
+  /?Action=CreateTransitGatewayVpcAttachment:
+    get:
+      operationId: CreateTransitGatewayVpcAttachment
+      summary: Attach a VPC to a transit gateway
+      description: Attaches the specified VPC to the specified transit gateway.
+      tags:
+        - VPC Attachments
+      parameters:
+        - name: Action
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: TransitGatewayId
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: VpcId
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: SubnetIds
+          in: query
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: Successful response.
+  /?Action=CreateTransitGatewayRouteTable:
+    get:
+      operationId: CreateTransitGatewayRouteTable
+      summary: Create a transit gateway route table
+      description: Creates a route table for the specified transit gateway.
+      tags:
+        - Route Tables
+      parameters:
+        - name: Action
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: TransitGatewayId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response.
+components:
+  schemas:
+    TransitGateway:
+      type: object
+      properties:
+        TransitGatewayId:
+          type: string
+          description: The ID of the transit gateway.
+        TransitGatewayArn:
+          type: string
+          description: The Amazon Resource Name (ARN) of the transit gateway.
+        State:
+          type: string
+          enum:
+            - pending
+            - available
+            - modifying
+            - deleting
+            - deleted
+        OwnerId:
+          type: string
+        Description:
+          type: string
+        CreationTime:
+          type: string
+          format: date-time
+    Tag:
+      type: object
+      properties:
+        Key:
+          type: string
+        Value:
+          type: string
+  securitySchemes:
+    aws_sig_v4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4 authentication.
+security:
+  - aws_sig_v4: []
