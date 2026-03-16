@@ -1,4 +1,4 @@
-name: Amazon Transit Gateway API
+name: Amazon Transit Gateway
 description: Amazon Transit Gateway connects VPCs and on-premises networks through a central hub, simplifying network architecture and reducing operational complexity for large-scale cloud deployments.
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/transit-gateway/
