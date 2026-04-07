@@ -47,7 +47,7 @@ paths:
   /?Action=CreateTransitGateway:
     get:
       operationId: CreateTransitGateway
-      summary: Create a transit gateway
+      summary: Amazon Transit Gateway Create a transit gateway
       description: Creates a transit gateway to interconnect VPCs and on-premises networks.
       tags:
         - Transit Gateways
@@ -88,7 +88,7 @@ paths:
   /?Action=DescribeTransitGateways:
     get:
       operationId: DescribeTransitGateways
-      summary: Describe transit gateways
+      summary: Amazon Transit Gateway Describe transit gateways
       description: Describes one or more transit gateways.
       tags:
         - Transit Gateways
@@ -114,7 +114,7 @@ paths:
   /?Action=DeleteTransitGateway:
     get:
       operationId: DeleteTransitGateway
-      summary: Delete a transit gateway
+      summary: Amazon Transit Gateway Delete a transit gateway
       description: Deletes the specified transit gateway.
       tags:
         - Transit Gateways
@@ -135,7 +135,7 @@ paths:
   /?Action=CreateTransitGatewayVpcAttachment:
     get:
       operationId: CreateTransitGatewayVpcAttachment
-      summary: Attach a VPC to a transit gateway
+      summary: Amazon Transit Gateway Attach a VPC to a transit gateway
       description: Attaches the specified VPC to the specified transit gateway.
       tags:
         - VPC Attachments
@@ -168,7 +168,7 @@ paths:
   /?Action=CreateTransitGatewayRouteTable:
     get:
       operationId: CreateTransitGatewayRouteTable
-      summary: Create a transit gateway route table
+      summary: Amazon Transit Gateway Create a transit gateway route table
       description: Creates a route table for the specified transit gateway.
       tags:
         - Route Tables
