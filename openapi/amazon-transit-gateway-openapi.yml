@@ -20,61 +20,65 @@ externalDocs:
   description: Amazon Transit Gateway API Reference
   url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html
 servers:
-  - url: https://ec2.{region}.amazonaws.com
-    description: Amazon EC2 regional endpoint (Transit Gateway operations)
-    variables:
-      region:
-        default: us-east-1
-        description: AWS region
-        enum:
-          - us-east-1
-          - us-east-2
-          - us-west-1
-          - us-west-2
-          - eu-west-1
-          - eu-west-2
-          - eu-west-3
-          - eu-central-1
-          - eu-north-1
-          - ap-northeast-1
-          - ap-northeast-2
-          - ap-southeast-1
-          - ap-southeast-2
-          - ap-south-1
-          - sa-east-1
-          - ca-central-1
+- url: https://ec2.{region}.amazonaws.com
+  description: Amazon EC2 regional endpoint (Transit Gateway operations)
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-north-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - sa-east-1
+      - ca-central-1
 paths:
   /?Action=CreateTransitGateway:
     get:
       operationId: CreateTransitGateway
-      summary: Amazon Transit Gateway Create a transit gateway
+      summary: Amazon Transit Gateway Create a Transit Gateway
       description: Creates a transit gateway to interconnect VPCs and on-premises networks.
       tags:
-        - Transit Gateways
+      - Transit Gateways
       parameters:
-        - name: Action
-          in: query
-          required: true
-          schema:
-            type: string
-            enum:
-              - CreateTransitGateway
-        - name: Description
-          in: query
-          schema:
-            type: string
-        - name: Options.AmazonSideAsn
-          in: query
-          schema:
-            type: integer
-            format: int64
-        - name: Options.AutoAcceptSharedAttachments
-          in: query
-          schema:
-            type: string
-            enum:
-              - enable
-              - disable
+      - name: Action
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - CreateTransitGateway
+        example: CreateTransitGateway
+      - name: Description
+        in: query
+        schema:
+          type: string
+        example: example
+      - name: Options.AmazonSideAsn
+        in: query
+        schema:
+          type: integer
+          format: int64
+        example: 1
+      - name: Options.AutoAcceptSharedAttachments
+        in: query
+        schema:
+          type: string
+          enum:
+          - enable
+          - disable
+        example: enable
       responses:
         '200':
           description: Successful response.
@@ -85,107 +89,133 @@ paths:
                 properties:
                   transitGateway:
                     $ref: '#/components/schemas/TransitGateway'
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /?Action=DescribeTransitGateways:
     get:
       operationId: DescribeTransitGateways
-      summary: Amazon Transit Gateway Describe transit gateways
+      summary: Amazon Transit Gateway Describe Transit Gateways
       description: Describes one or more transit gateways.
       tags:
-        - Transit Gateways
+      - Transit Gateways
       parameters:
-        - name: Action
-          in: query
-          required: true
-          schema:
+      - name: Action
+        in: query
+        required: true
+        schema:
+          type: string
+        example: example
+      - name: TransitGatewayId
+        in: query
+        schema:
+          type: array
+          items:
             type: string
-        - name: TransitGatewayId
-          in: query
-          schema:
-            type: array
-            items:
-              type: string
-        - name: MaxResults
-          in: query
-          schema:
-            type: integer
+        example: example-id
+      - name: MaxResults
+        in: query
+        schema:
+          type: integer
+        example: 1
       responses:
         '200':
           description: Successful response.
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /?Action=DeleteTransitGateway:
     get:
       operationId: DeleteTransitGateway
-      summary: Amazon Transit Gateway Delete a transit gateway
+      summary: Amazon Transit Gateway Delete a Transit Gateway
       description: Deletes the specified transit gateway.
       tags:
-        - Transit Gateways
+      - Transit Gateways
       parameters:
-        - name: Action
-          in: query
-          required: true
-          schema:
-            type: string
-        - name: TransitGatewayId
-          in: query
-          required: true
-          schema:
-            type: string
+      - name: Action
+        in: query
+        required: true
+        schema:
+          type: string
+        example: example
+      - name: TransitGatewayId
+        in: query
+        required: true
+        schema:
+          type: string
+        example: example-id
       responses:
         '200':
           description: Successful response.
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /?Action=CreateTransitGatewayVpcAttachment:
     get:
       operationId: CreateTransitGatewayVpcAttachment
-      summary: Amazon Transit Gateway Attach a VPC to a transit gateway
+      summary: Amazon Transit Gateway Attach a VPC to a Transit Gateway
       description: Attaches the specified VPC to the specified transit gateway.
       tags:
-        - VPC Attachments
+      - VPC Attachments
       parameters:
-        - name: Action
-          in: query
-          required: true
-          schema:
+      - name: Action
+        in: query
+        required: true
+        schema:
+          type: string
+        example: example
+      - name: TransitGatewayId
+        in: query
+        required: true
+        schema:
+          type: string
+        example: example-id
+      - name: VpcId
+        in: query
+        required: true
+        schema:
+          type: string
+        example: example-id
+      - name: SubnetIds
+        in: query
+        required: true
+        schema:
+          type: array
+          items:
             type: string
-        - name: TransitGatewayId
-          in: query
-          required: true
-          schema:
-            type: string
-        - name: VpcId
-          in: query
-          required: true
-          schema:
-            type: string
-        - name: SubnetIds
-          in: query
-          required: true
-          schema:
-            type: array
-            items:
-              type: string
+        example: example-id
       responses:
         '200':
           description: Successful response.
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /?Action=CreateTransitGatewayRouteTable:
     get:
       operationId: CreateTransitGatewayRouteTable
-      summary: Amazon Transit Gateway Create a transit gateway route table
+      summary: Amazon Transit Gateway Create a Transit Gateway Route Table
       description: Creates a route table for the specified transit gateway.
       tags:
-        - Route Tables
+      - Route Tables
       parameters:
-        - name: Action
-          in: query
-          required: true
-          schema:
-            type: string
-        - name: TransitGatewayId
-          in: query
-          required: true
-          schema:
-            type: string
+      - name: Action
+        in: query
+        required: true
+        schema:
+          type: string
+        example: example
+      - name: TransitGatewayId
+        in: query
+        required: true
+        schema:
+          type: string
+        example: example-id
       responses:
         '200':
           description: Successful response.
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
 components:
   schemas:
     TransitGateway:
@@ -200,11 +230,11 @@ components:
         State:
           type: string
           enum:
-            - pending
-            - available
-            - modifying
-            - deleting
-            - deleted
+          - pending
+          - available
+          - modifying
+          - deleting
+          - deleted
         OwnerId:
           type: string
         Description:
@@ -226,8 +256,8 @@ components:
       in: header
       description: AWS Signature Version 4 authentication.
 security:
-  - aws_sig_v4: []
+- aws_sig_v4: []
 tags:
-  - name: Route Tables
-  - name: Transit Gateways
-  - name: VPC Attachments
+- name: Route Tables
+- name: Transit Gateways
+- name: VPC Attachments

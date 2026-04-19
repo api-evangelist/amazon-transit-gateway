@@ -1,0 +1,7 @@
+id: amazon-transit-gateway-capability
+name: Amazon Transit Gateway Capability
+description: Workflow-oriented capability for Amazon Transit Gateway
+tags:
+- AWS
+consumes:
+- ref: capabilities/shared/amazon-transit-gateway-shared.yaml

@@ -1,0 +1,25 @@
+id: amazon-transit-gateway
+name: Amazon Transit Gateway
+description: Shared capability definition for Amazon Transit Gateway
+namespace: amazon-transit-gateway
+operations:
+- operationId: CreateTransitGateway
+  method: GET
+  path: /?Action=CreateTransitGateway
+  summary: Amazon Transit Gateway Create a Transit Gateway
+- operationId: DescribeTransitGateways
+  method: GET
+  path: /?Action=DescribeTransitGateways
+  summary: Amazon Transit Gateway Describe Transit Gateways
+- operationId: DeleteTransitGateway
+  method: GET
+  path: /?Action=DeleteTransitGateway
+  summary: Amazon Transit Gateway Delete a Transit Gateway
+- operationId: CreateTransitGatewayVpcAttachment
+  method: GET
+  path: /?Action=CreateTransitGatewayVpcAttachment
+  summary: Amazon Transit Gateway Attach a VPC to a Transit Gateway
+- operationId: CreateTransitGatewayRouteTable
+  method: GET
+  path: /?Action=CreateTransitGatewayRouteTable
+  summary: Amazon Transit Gateway Create a Transit Gateway Route Table

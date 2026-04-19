@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "properties": {
+    "TransitGatewayId": {
+      "type": "string",
+      "description": "The ID of the transit gateway."
+    },
+    "TransitGatewayArn": {
+      "type": "string",
+      "description": "The Amazon Resource Name (ARN) of the transit gateway."
+    },
+    "State": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "available",
+        "modifying",
+        "deleting",
+        "deleted"
+      ]
+    },
+    "OwnerId": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "CreationTime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TransitGateway"
+}
