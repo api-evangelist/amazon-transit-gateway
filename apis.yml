@@ -39,11 +39,11 @@ apis:
     url: https://status.aws.amazon.com/
   - type: FAQ
     url: https://aws.amazon.com/transit-gateway/faqs/
-  - type: Service Level Agreement
+  - type: ServiceLevelAgreement
     url: https://aws.amazon.com/ec2/sla/
   - type: User Guide
     url: https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html
-  - type: API Reference
+  - type: APIReference
     url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html
   - type: Code Examples
     url: https://docs.aws.amazon.com/vpc/latest/tgw/TGW_Scenarios.html
@@ -78,7 +78,7 @@ common:
   url: https://repost.aws/knowledge-center
 - type: YouTube
   url: https://www.youtube.com/user/AmazonWebServices
-- type: Stack Overflow
+- type: StackOverflow
   url: https://stackoverflow.com/questions/tagged/aws-transit-gateway
 - type: Contact
   url: https://aws.amazon.com/contact-us/
