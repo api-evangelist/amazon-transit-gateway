@@ -1,13 +1,14 @@
 name: Amazon Transit Gateway
-description: Amazon Transit Gateway connects VPCs and on-premises networks through a central hub, simplifying network architecture and reducing operational complexity for large-scale cloud 
-  deployments.
+description: Amazon Transit Gateway connects VPCs and on-premises networks through a central hub, simplifying network architecture
+  and reducing operational complexity for large-scale cloud deployments.
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/transit-gateway/
 created: '2024-01-15'
-modified: '2026-04-19'
+modified: '2026-05-19'
 apis:
 - name: Amazon Transit Gateway REST API
-  description: RESTful API for Amazon Transit Gateway operations including creating and managing transit gateways, VPC attachments, route tables, peering connections, and multicast domains.
+  description: RESTful API for Amazon Transit Gateway operations including creating and managing transit gateways, VPC attachments,
+    route tables, peering connections, and multicast domains.
   image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
   humanURL: https://aws.amazon.com/transit-gateway/
   baseURL: https://ec2.amazonaws.com
@@ -49,6 +50,12 @@ apis:
     url: https://docs.aws.amazon.com/vpc/latest/tgw/TGW_Scenarios.html
   - type: Security
     url: https://docs.aws.amazon.com/vpc/latest/tgw/tgw-security.html
+  - type: NaftikoCapability
+    url: capabilities/amazon-transit-gateway-route-tables.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-transit-gateway-transit-gateways.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-transit-gateway-vpc-attachments.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/
@@ -86,8 +93,6 @@ common:
   url: https://raw.githubusercontent.com/api-evangelist/amazon-transit-gateway/refs/heads/main/rules/amazon-transit-gateway-spectral-rules.yml
 - type: Vocabulary
   url: https://raw.githubusercontent.com/api-evangelist/amazon-transit-gateway/refs/heads/main/vocabulary/amazon-transit-gateway-vocabulary.yaml
-- type: NaftikoCapability
-  url: https://raw.githubusercontent.com/api-evangelist/amazon-transit-gateway/refs/heads/main/capabilities/amazon-transit-gateway-capability.yaml
 - type: Features
   data:
   - name: Automation
@@ -101,14 +106,14 @@ common:
 - type: Integrations
   url: https://aws.amazon.com/partners/
 integrations:
-  - name: Partner Programs
-  - name: Resources
-  - name: Success Stories
-  - name: Work with an AWS Partner
-  - name: AWS Marketplace
-  - name: AWS Partner Central
-  - name: Partner Paths
-  - name: co-sell with AWS
+- name: Partner Programs
+- name: Resources
+- name: Success Stories
+- name: Work with an AWS Partner
+- name: AWS Marketplace
+- name: AWS Partner Central
+- name: Partner Paths
+- name: co-sell with AWS
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

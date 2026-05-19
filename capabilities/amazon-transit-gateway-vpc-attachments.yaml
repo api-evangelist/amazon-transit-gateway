@@ -1,0 +1,99 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon Transit Gateway API — VPC Attachments
+  description: 'Amazon Transit Gateway API — VPC Attachments. 1 operations. Lead operation: Amazon Transit Gateway Attach
+    a VPC to a Transit Gateway. Self-contained Naftiko capability covering one Amazon Transit Gateway business surface.'
+  tags:
+  - Amazon Transit Gateway
+  - VPC Attachments
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_TRANSIT_GATEWAY_API_KEY: AMAZON_TRANSIT_GATEWAY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-transit-gateway-vpc-attachments
+    baseUri: https://ec2.{region}.amazonaws.com
+    description: Amazon Transit Gateway API — VPC Attachments business capability. Self-contained, no shared references.
+    resources:
+    - name: ?Action=CreateTransitGatewayVpcAttachment
+      path: /?Action=CreateTransitGatewayVpcAttachment
+      operations:
+      - name: createtransitgatewayvpcattachment
+        method: GET
+        description: Amazon Transit Gateway Attach a VPC to a Transit Gateway
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: TransitGatewayId
+          in: query
+          type: string
+          required: true
+        - name: VpcId
+          in: query
+          type: string
+          required: true
+        - name: SubnetIds
+          in: query
+          type: array
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_TRANSIT_GATEWAY_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-transit-gateway-vpc-attachments-rest
+    port: 8080
+    description: REST adapter for Amazon Transit Gateway API — VPC Attachments. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/action-createtransitgatewayvpcattachment
+      name: action-createtransitgatewayvpcattachment
+      description: REST surface for ?Action=CreateTransitGatewayVpcAttachment.
+      operations:
+      - method: GET
+        name: createtransitgatewayvpcattachment
+        description: Amazon Transit Gateway Attach a VPC to a Transit Gateway
+        call: amazon-transit-gateway-vpc-attachments.createtransitgatewayvpcattachment
+        with:
+          Action: rest.Action
+          TransitGatewayId: rest.TransitGatewayId
+          VpcId: rest.VpcId
+          SubnetIds: rest.SubnetIds
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-transit-gateway-vpc-attachments-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon Transit Gateway API — VPC Attachments. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: amazon-transit-gateway-attach-vpc
+      description: Amazon Transit Gateway Attach a VPC to a Transit Gateway
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-transit-gateway-vpc-attachments.createtransitgatewayvpcattachment
+      with:
+        Action: tools.Action
+        TransitGatewayId: tools.TransitGatewayId
+        VpcId: tools.VpcId
+        SubnetIds: tools.SubnetIds
+      outputParameters:
+      - type: object
+        mapping: $.
