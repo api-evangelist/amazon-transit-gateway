@@ -1,0 +1,182 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Transit Gateway API",
+    "version": "2016-11-15"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Transit Gateways",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Transit Gateway Create a Transit Gateway",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ec2.{region}.amazonaws.com/?Action=CreateTransitGateway",
+            "params": [
+              {
+                "name": "Action",
+                "value": "CreateTransitGateway",
+                "type": "query"
+              },
+              {
+                "name": "Description",
+                "value": "example",
+                "type": "query"
+              },
+              {
+                "name": "Options.AmazonSideAsn",
+                "value": "1",
+                "type": "query"
+              },
+              {
+                "name": "Options.AutoAcceptSharedAttachments",
+                "value": "enable",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Creates a transit gateway to interconnect VPCs and on-premises networks."
+        },
+        {
+          "info": {
+            "name": "Amazon Transit Gateway Describe Transit Gateways",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ec2.{region}.amazonaws.com/?Action=DescribeTransitGateways",
+            "params": [
+              {
+                "name": "Action",
+                "value": "example",
+                "type": "query"
+              },
+              {
+                "name": "TransitGatewayId",
+                "value": "example-id",
+                "type": "query"
+              },
+              {
+                "name": "MaxResults",
+                "value": "1",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Describes one or more transit gateways."
+        },
+        {
+          "info": {
+            "name": "Amazon Transit Gateway Delete a Transit Gateway",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ec2.{region}.amazonaws.com/?Action=DeleteTransitGateway",
+            "params": [
+              {
+                "name": "Action",
+                "value": "example",
+                "type": "query"
+              },
+              {
+                "name": "TransitGatewayId",
+                "value": "example-id",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Deletes the specified transit gateway."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "VPC Attachments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Transit Gateway Attach a VPC to a Transit Gateway",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ec2.{region}.amazonaws.com/?Action=CreateTransitGatewayVpcAttachment",
+            "params": [
+              {
+                "name": "Action",
+                "value": "example",
+                "type": "query"
+              },
+              {
+                "name": "TransitGatewayId",
+                "value": "example-id",
+                "type": "query"
+              },
+              {
+                "name": "VpcId",
+                "value": "example-id",
+                "type": "query"
+              },
+              {
+                "name": "SubnetIds",
+                "value": "example-id",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Attaches the specified VPC to the specified transit gateway."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Route Tables",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Transit Gateway Create a Transit Gateway Route Table",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://ec2.{region}.amazonaws.com/?Action=CreateTransitGatewayRouteTable",
+            "params": [
+              {
+                "name": "Action",
+                "value": "example",
+                "type": "query"
+              },
+              {
+                "name": "TransitGatewayId",
+                "value": "example-id",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Creates a route table for the specified transit gateway."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
