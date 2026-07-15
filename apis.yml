@@ -54,6 +54,8 @@ apis:
       - type: Security
         url: https://docs.aws.amazon.com/vpc/latest/tgw/tgw-security.html
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-transit-gateway-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-transit-gateway-trust-center.yml
   - type: VulnerabilityDisclosure
