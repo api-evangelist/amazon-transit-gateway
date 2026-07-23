@@ -1,11 +1,7 @@
 openapi: 3.1.0
 info:
-  title: Amazon Transit Gateway API
-  description: >-
-    Amazon Transit Gateway connects VPCs and on-premises networks through a
-    central hub. This API provides operations for creating and managing transit
-    gateways, VPC attachments, route tables, peering connections, and
-    multicast domains via the EC2 API.
+  title: Amazon Transit Gateway Route Tables Transit Gateways API
+  description: Amazon Transit Gateway connects VPCs and on-premises networks through a central hub. This API provides operations for creating and managing transit gateways, VPC attachments, route tables, peering connections, and multicast domains via the EC2 API.
   version: '2016-11-15'
   contact:
     name: Amazon Web Services
@@ -16,9 +12,6 @@ info:
   termsOfService: https://aws.amazon.com/service-terms/
   x-logo:
     url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-externalDocs:
-  description: Amazon Transit Gateway API Reference
-  url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html
 servers:
 - url: https://ec2.{region}.amazonaws.com
   description: Amazon EC2 regional endpoint (Transit Gateway operations)
@@ -43,6 +36,10 @@ servers:
       - ap-south-1
       - sa-east-1
       - ca-central-1
+security:
+- aws_sig_v4: []
+tags:
+- name: Transit Gateways
 paths:
   /?Action=CreateTransitGateway:
     get:
@@ -150,72 +147,6 @@ paths:
       x-microcks-operation:
         delay: 0
         dispatcher: FALLBACK
-  /?Action=CreateTransitGatewayVpcAttachment:
-    get:
-      operationId: CreateTransitGatewayVpcAttachment
-      summary: Amazon Transit Gateway Attach a VPC to a Transit Gateway
-      description: Attaches the specified VPC to the specified transit gateway.
-      tags:
-      - VPC Attachments
-      parameters:
-      - name: Action
-        in: query
-        required: true
-        schema:
-          type: string
-        example: example
-      - name: TransitGatewayId
-        in: query
-        required: true
-        schema:
-          type: string
-        example: example-id
-      - name: VpcId
-        in: query
-        required: true
-        schema:
-          type: string
-        example: example-id
-      - name: SubnetIds
-        in: query
-        required: true
-        schema:
-          type: array
-          items:
-            type: string
-        example: example-id
-      responses:
-        '200':
-          description: Successful response.
-      x-microcks-operation:
-        delay: 0
-        dispatcher: FALLBACK
-  /?Action=CreateTransitGatewayRouteTable:
-    get:
-      operationId: CreateTransitGatewayRouteTable
-      summary: Amazon Transit Gateway Create a Transit Gateway Route Table
-      description: Creates a route table for the specified transit gateway.
-      tags:
-      - Route Tables
-      parameters:
-      - name: Action
-        in: query
-        required: true
-        schema:
-          type: string
-        example: example
-      - name: TransitGatewayId
-        in: query
-        required: true
-        schema:
-          type: string
-        example: example-id
-      responses:
-        '200':
-          description: Successful response.
-      x-microcks-operation:
-        delay: 0
-        dispatcher: FALLBACK
 components:
   schemas:
     TransitGateway:
@@ -242,22 +173,12 @@ components:
         CreationTime:
           type: string
           format: date-time
-    Tag:
-      type: object
-      properties:
-        Key:
-          type: string
-        Value:
-          type: string
   securitySchemes:
     aws_sig_v4:
       type: apiKey
       name: Authorization
       in: header
       description: AWS Signature Version 4 authentication.
-security:
-- aws_sig_v4: []
-tags:
-- name: Route Tables
-- name: Transit Gateways
-- name: VPC Attachments
+externalDocs:
+  description: Amazon Transit Gateway API Reference
+  url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html
