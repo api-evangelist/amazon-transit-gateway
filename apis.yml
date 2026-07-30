@@ -2,58 +2,143 @@ name: Amazon Transit Gateway
 description: >-
   Amazon Transit Gateway connects VPCs and on-premises networks through a central hub, simplifying network architecture
   and reducing operational complexity for large-scale cloud deployments.
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/transit-gateway/
 created: '2024-01-15'
 modified: '2026-05-19'
 apis:
-  - name: Amazon Transit Gateway REST API
-    description: >-
-      RESTful API for Amazon Transit Gateway operations including creating and managing transit gateways, VPC
-      attachments, route tables, peering connections, and multicast domains.
-    image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-    humanURL: https://aws.amazon.com/transit-gateway/
-    baseURL: https://ec2.amazonaws.com
-    tags:
-      - AWS
-      - Networking
-      - Transit Gateway
-      - VPC
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html
-      - type: OpenAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/amazon-transit-gateway/refs/heads/main/openapi/amazon-transit-gateway-openapi.yml
-      - type: OpenAPI
-        url: https://api.apis.guru/v2/specs/amazonaws.com/ec2/2016-11-15/openapi.yaml
-      - type: JSONSchema
-        url: json-schema/amazon-transit-gateway-schema.json
-      - type: JSONLD
-        url: json-ld/amazon-transit-gateway-context.jsonld
-      - type: Pricing
-        url: https://aws.amazon.com/transit-gateway/pricing/
-      - type: GettingStarted
-        url: https://aws.amazon.com/transit-gateway/getting-started/
-      - type: Authentication
-        url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html
-      - type: SDKs
-        url: https://aws.amazon.com/tools/
-      - type: StatusPage
-        url: https://status.aws.amazon.com/
-      - type: FAQ
-        url: https://aws.amazon.com/transit-gateway/faqs/
-      - type: ServiceLevelAgreement
-        url: https://aws.amazon.com/ec2/sla/
-      - type: User Guide
-        url: https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html
-      - type: APIReference
-        url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html
-      - type: Code Examples
-        url: https://docs.aws.amazon.com/vpc/latest/tgw/TGW_Scenarios.html
-      - type: Security
-        url: https://docs.aws.amazon.com/vpc/latest/tgw/tgw-security.html
+- aid: amazon-transit-gateway:amazon-transit-gateway-route-tables-api
+  name: Amazon Transit Gateway Route Tables API
+  description: The Route Tables API from Amazon Transit Gateway — 1 operation(s) for route tables.
+  humanURL: https://aws.amazon.com/transit-gateway/
+  baseURL: https://ec2.amazonaws.com
+  tags:
+  - Route Tables
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-transit-gateway-route-tables-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html
+  - type: JSONSchema
+    url: json-schema/amazon-transit-gateway-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-transit-gateway-context.jsonld
+  - type: Pricing
+    url: https://aws.amazon.com/transit-gateway/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/transit-gateway/getting-started/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html
+  - type: SDKs
+    url: https://aws.amazon.com/tools/
+  - type: StatusPage
+    url: https://status.aws.amazon.com/
+  - type: FAQ
+    url: https://aws.amazon.com/transit-gateway/faqs/
+  - type: ServiceLevelAgreement
+    url: https://aws.amazon.com/ec2/sla/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html
+  - type: APIReference
+    url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html
+  - type: Code Examples
+    url: https://docs.aws.amazon.com/vpc/latest/tgw/TGW_Scenarios.html
+  - type: Security
+    url: https://docs.aws.amazon.com/vpc/latest/tgw/tgw-security.html
+- aid: amazon-transit-gateway:amazon-transit-gateway-transit-gateways-api
+  name: Amazon Transit Gateway Transit Gateways API
+  description: >-
+    The Transit Gateways API from Amazon Transit Gateway — 3 operation(s) for transit gateways.
+  humanURL: https://aws.amazon.com/transit-gateway/
+  baseURL: https://ec2.amazonaws.com
+  tags:
+  - Transit Gateways
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-transit-gateway-transit-gateways-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html
+  - type: JSONSchema
+    url: json-schema/amazon-transit-gateway-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-transit-gateway-context.jsonld
+  - type: Pricing
+    url: https://aws.amazon.com/transit-gateway/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/transit-gateway/getting-started/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html
+  - type: SDKs
+    url: https://aws.amazon.com/tools/
+  - type: StatusPage
+    url: https://status.aws.amazon.com/
+  - type: FAQ
+    url: https://aws.amazon.com/transit-gateway/faqs/
+  - type: ServiceLevelAgreement
+    url: https://aws.amazon.com/ec2/sla/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html
+  - type: APIReference
+    url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html
+  - type: Code Examples
+    url: https://docs.aws.amazon.com/vpc/latest/tgw/TGW_Scenarios.html
+  - type: Security
+    url: https://docs.aws.amazon.com/vpc/latest/tgw/tgw-security.html
+- aid: amazon-transit-gateway:amazon-transit-gateway-vpc-attachments-api
+  name: Amazon Transit Gateway VPC Attachments API
+  description: >-
+    The VPC Attachments API from Amazon Transit Gateway — 1 operation(s) for vpc attachments.
+  humanURL: https://aws.amazon.com/transit-gateway/
+  baseURL: https://ec2.amazonaws.com
+  tags:
+  - VPC Attachments
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-transit-gateway-vpc-attachments-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html
+  - type: JSONSchema
+    url: json-schema/amazon-transit-gateway-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-transit-gateway-context.jsonld
+  - type: Pricing
+    url: https://aws.amazon.com/transit-gateway/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/transit-gateway/getting-started/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html
+  - type: SDKs
+    url: https://aws.amazon.com/tools/
+  - type: StatusPage
+    url: https://status.aws.amazon.com/
+  - type: FAQ
+    url: https://aws.amazon.com/transit-gateway/faqs/
+  - type: ServiceLevelAgreement
+    url: https://aws.amazon.com/ec2/sla/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html
+  - type: APIReference
+    url: https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html
+  - type: Code Examples
+    url: https://docs.aws.amazon.com/vpc/latest/tgw/TGW_Scenarios.html
+  - type: Security
+    url: https://docs.aws.amazon.com/vpc/latest/tgw/tgw-security.html
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-transit-gateway/overview
   - type: AgenticAccess
     url: agentic-access/amazon-transit-gateway-agentic-access.yml
   - type: TrustCenter
