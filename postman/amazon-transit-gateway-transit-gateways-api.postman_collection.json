@@ -1,0 +1,370 @@
+{
+  "info": {
+    "_postman_id": "5df4f781-ec65-44a7-92bc-38560caf1dd8",
+    "name": "Amazon Transit Gateway Route Tables Transit Gateways API",
+    "description": "Amazon Transit Gateway connects VPCs and on-premises networks through a central hub. This API provides operations for creating and managing transit gateways, VPC attachments, route tables, peering connections, and multicast domains via the EC2 API.\n\nContact Support:\n Name: Amazon Web Services",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:56:51.000Z",
+    "updatedAt": "2026-07-28T00:56:51.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-5df4f781-ec65-44a7-92bc-38560caf1dd8"
+  },
+  "item": [
+    {
+      "name": "?Action=CreateTransitGateway",
+      "item": [
+        {
+          "name": "Amazon Transit Gateway Create a Transit Gateway",
+          "id": "4ccacd05-f8d8-46e0-ba7c-2456c1448700",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/xml"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/?Action=CreateTransitGateway&Action=CreateTransitGateway&Description=<string>&Options.AmazonSideAsn=<long>&Options.AutoAcceptSharedAttachments=disable",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "key": "Action",
+                  "value": "CreateTransitGateway"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Action",
+                  "value": "CreateTransitGateway"
+                },
+                {
+                  "key": "Description",
+                  "value": "<string>"
+                },
+                {
+                  "key": "Options.AmazonSideAsn",
+                  "value": "<long>"
+                },
+                {
+                  "key": "Options.AutoAcceptSharedAttachments",
+                  "value": "disable"
+                }
+              ]
+            },
+            "description": "Creates a transit gateway to interconnect VPCs and on-premises networks."
+          },
+          "response": [
+            {
+              "id": "83c5b72f-2b1c-4c1d-ab48-21af0a00eae8",
+              "name": "Successful response.",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/?Action=CreateTransitGateway&Description=<string>&Options.AmazonSideAsn=<long>&Options.AutoAcceptSharedAttachments=disable",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "CreateTransitGateway"
+                    },
+                    {
+                      "key": "Description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Options.AmazonSideAsn",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Options.AutoAcceptSharedAttachments",
+                      "value": "disable"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <transitGateway>\n    <TransitGatewayId>(string)</TransitGatewayId>\n    <TransitGatewayArn>(string)</TransitGatewayArn>\n    <State>(string)</State>\n    <OwnerId>(string)</OwnerId>\n    <Description>(string)</Description>\n    <CreationTime>(string)</CreationTime>\n  </transitGateway>\n</element>",
+              "createdAt": "2026-07-28T00:56:51.000Z",
+              "updatedAt": "2026-07-28T00:56:51.000Z",
+              "uid": "35240-83c5b72f-2b1c-4c1d-ab48-21af0a00eae8"
+            }
+          ],
+          "createdAt": "2026-07-28T00:56:51.000Z",
+          "updatedAt": "2026-07-28T00:56:51.000Z",
+          "uid": "35240-4ccacd05-f8d8-46e0-ba7c-2456c1448700"
+        }
+      ],
+      "id": "9074f3e3-5b89-41d3-a362-a7496d2ade0d",
+      "createdAt": "2026-07-28T00:56:51.000Z",
+      "updatedAt": "2026-07-28T00:56:51.000Z",
+      "uid": "35240-9074f3e3-5b89-41d3-a362-a7496d2ade0d"
+    },
+    {
+      "name": "?Action=DescribeTransitGateways",
+      "item": [
+        {
+          "name": "Amazon Transit Gateway Describe Transit Gateways",
+          "id": "ae3bad7b-ac72-493c-94b0-bd064c9c88ba",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/?Action=DescribeTransitGateways&Action=<string>&TransitGatewayId=<string>&TransitGatewayId=<string>&MaxResults=<integer>",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "key": "Action",
+                  "value": "DescribeTransitGateways"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Action",
+                  "value": "<string>"
+                },
+                {
+                  "key": "TransitGatewayId",
+                  "value": "<string>"
+                },
+                {
+                  "key": "TransitGatewayId",
+                  "value": "<string>"
+                },
+                {
+                  "key": "MaxResults",
+                  "value": "<integer>"
+                }
+              ]
+            },
+            "description": "Describes one or more transit gateways."
+          },
+          "response": [
+            {
+              "id": "06680178-71e5-4d96-a8c7-edd5cdbdf87c",
+              "name": "Successful response.",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/?Action=<string>&TransitGatewayId=<string>&MaxResults=<integer>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "TransitGatewayId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "MaxResults",
+                      "value": "<integer>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:56:51.000Z",
+              "updatedAt": "2026-07-28T00:56:51.000Z",
+              "uid": "35240-06680178-71e5-4d96-a8c7-edd5cdbdf87c"
+            }
+          ],
+          "createdAt": "2026-07-28T00:56:51.000Z",
+          "updatedAt": "2026-07-28T00:56:51.000Z",
+          "uid": "35240-ae3bad7b-ac72-493c-94b0-bd064c9c88ba"
+        }
+      ],
+      "id": "38cb9937-deeb-4cf3-99a3-26bc8e99d221",
+      "createdAt": "2026-07-28T00:56:51.000Z",
+      "updatedAt": "2026-07-28T00:56:51.000Z",
+      "uid": "35240-38cb9937-deeb-4cf3-99a3-26bc8e99d221"
+    },
+    {
+      "name": "?Action=DeleteTransitGateway",
+      "item": [
+        {
+          "name": "Amazon Transit Gateway Delete a Transit Gateway",
+          "id": "e2c0e22c-13f0-4aec-803a-2f680d1f6be7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/?Action=DeleteTransitGateway&Action=<string>&TransitGatewayId=<string>",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "key": "Action",
+                  "value": "DeleteTransitGateway"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Action",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "TransitGatewayId",
+                  "value": "<string>"
+                }
+              ]
+            },
+            "description": "Deletes the specified transit gateway."
+          },
+          "response": [
+            {
+              "id": "a71c9873-f963-4084-9c49-08b2501ef537",
+              "name": "Successful response.",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/?Action=<string>&TransitGatewayId=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "TransitGatewayId",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:56:51.000Z",
+              "updatedAt": "2026-07-28T00:56:51.000Z",
+              "uid": "35240-a71c9873-f963-4084-9c49-08b2501ef537"
+            }
+          ],
+          "createdAt": "2026-07-28T00:56:51.000Z",
+          "updatedAt": "2026-07-28T00:56:51.000Z",
+          "uid": "35240-e2c0e22c-13f0-4aec-803a-2f680d1f6be7"
+        }
+      ],
+      "id": "d3ae51d1-2192-4d58-a869-71770ff074d1",
+      "createdAt": "2026-07-28T00:56:51.000Z",
+      "updatedAt": "2026-07-28T00:56:51.000Z",
+      "uid": "35240-d3ae51d1-2192-4d58-a869-71770ff074d1"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://ec2.{{region}}.amazonaws.com"
+    }
+  ]
+}

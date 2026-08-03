@@ -1,0 +1,18 @@
+{
+  "provider": "amazon-transit-gateway",
+  "sources": [
+    "amazon-transit-gateway-route-tables-api-openapi.yml",
+    "amazon-transit-gateway-transit-gateways-api-openapi.yml",
+    "amazon-transit-gateway-vpc-attachments-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-transit-gateway-route-tables-api-openapi.yml",
+    "amazon-transit-gateway-transit-gateways-api-openapi.yml",
+    "amazon-transit-gateway-vpc-attachments-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
