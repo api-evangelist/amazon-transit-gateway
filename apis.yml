@@ -2,6 +2,7 @@ name: Amazon Transit Gateway
 description: >-
   Amazon Transit Gateway connects VPCs and on-premises networks through a central hub, simplifying network architecture
   and reducing operational complexity for large-scale cloud deployments.
+specificationVersion: '0.23'
 accessModel:
   pricing: freemium
   onboarding: self-serve
