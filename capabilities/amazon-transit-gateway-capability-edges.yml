@@ -1,0 +1,42 @@
+slug: amazon-transit-gateway
+provider: Amazon Transit Gateway
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Telecommunications
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Transit Gateways
+  spec_file: amazon-transit-gateway-transit-gateways-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: Create a Transit Gateway ... Describe Transit Gateways ... Delete a Transit Gateway
+  reason: Provisioning and lifecycle of cloud network connectivity hubs connecting VPCs and on-premises
+    networks — IT infrastructure (network/cloud) management.
+- tag: Route Tables
+  spec_file: amazon-transit-gateway-route-tables-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: Amazon Transit Gateway Create a Transit Gateway Route Table
+  reason: Creation of routing tables for cloud network hubs — enterprise IT cloud network infrastructure,
+    not carrier network operations.
+- tag: VPC Attachments
+  spec_file: amazon-transit-gateway-vpc-attachments-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: Amazon Transit Gateway Attach a VPC to a Transit Gateway
+  reason: Attaching virtual private clouds to a network hub is cloud network infrastructure configuration
+    under IT Infrastructure Management.
