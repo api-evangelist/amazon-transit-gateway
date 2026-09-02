@@ -235,3 +235,5 @@ tags:
   - Networking
   - Transit Gateway
   - VPC
+x-parent: aws
+x-relationship: product
