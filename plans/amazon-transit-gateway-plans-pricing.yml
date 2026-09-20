@@ -10,6 +10,10 @@ provenance:
   grounding: every price_text was found verbatim in the fetched page text
 audience: developer-api
 pricing_basis: usage-other
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-09-20'
 published: true
 note: Live pricing tables render via dynamic placeholders ({priceOf...}) so no per-region rates are in
   the visible text; only the worked pricing example contains numeric prices ($0.1/hour, $0.05 per VPC
