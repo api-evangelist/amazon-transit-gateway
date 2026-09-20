@@ -151,6 +151,8 @@ apis:
   - type: Security
     url: https://docs.aws.amazon.com/vpc/latest/tgw/tgw-security.html
 common:
+  - type: Plans
+    url: plans/amazon-transit-gateway-plans-pricing.yml
   - type: CapabilityMap
     url: capabilities/amazon-transit-gateway-capability-edges.yml
     name: Amazon Transit Gateway Business Capability Map
