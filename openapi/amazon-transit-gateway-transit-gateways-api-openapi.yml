@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Amazon Transit Gateway Route Tables Transit Gateways API
+  title: Amazon Transit Gateway Transit Gateways API
   description: Amazon Transit Gateway connects VPCs and on-premises networks through a central hub. This API provides operations for creating and managing transit gateways, VPC attachments, route tables, peering connections, and multicast domains via the EC2 API.
   version: '2016-11-15'
   contact:
