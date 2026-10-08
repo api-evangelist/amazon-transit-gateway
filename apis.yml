@@ -151,6 +151,10 @@ apis:
   - type: Security
     url: https://docs.aws.amazon.com/vpc/latest/tgw/tgw-security.html
 common:
+  - type: RateLimits
+    url: rate-limits/amazon-transit-gateway-rate-limits.yml
+  - type: FinOps
+    url: finops/amazon-transit-gateway-finops.yml
   - type: Pricing
     url: https://aws.amazon.com/transit-gateway/pricing/
   - type: Plans
