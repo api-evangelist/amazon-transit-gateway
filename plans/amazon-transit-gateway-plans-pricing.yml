@@ -33,3 +33,29 @@ plans:
   currency: USD
   period: per-use
   unit: per GB processed
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - hybrid
+  - metered
+  units:
+  - compute
+  - data
+  plans:
+  - name: Transit Gateway hourly charge (US East Ohio, pricing example)
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Transit Gateway data processing (pricing example)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
