@@ -1,4 +1,4 @@
-# Amazon Transit Gateway (amazon-transit-gateway)
+# Amazon Transit Gateway
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,85 +66,173 @@
 
 Amazon Transit Gateway connects VPCs and on-premises networks through a central hub, simplifying network architecture and reducing operational complexity for large-scale cloud deployments.
 
-**APIs.json:** [https://aws.amazon.com/transit-gateway/](https://aws.amazon.com/transit-gateway/)
+**Areas:** AWS · Cloud Networking · Network Hub · Networking · Transit Gateway · VPC
 
-## Tags
+## Amazon Transit Gateway on APIs.io
 
-- AWS
-- Cloud Networking
-- Network Hub
-- Networking
-- Transit Gateway
-- VPC
+Everything profiled for Amazon Transit Gateway is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-transit-gateway/](https://apis.io/providers/amazon-transit-gateway/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (3)
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-05-19
+- [Amazon Transit Gateway Route Tables API](https://apis.io/apis/amazon-transit-gateway/amazon-transit-gateway-route-tables-api/) — The Route Tables API from Amazon Transit Gateway — 1 operation(s) for route tables.
+- [Amazon Transit Gateway Transit Gateways API](https://apis.io/apis/amazon-transit-gateway/amazon-transit-gateway-transit-gateways-api/) — The Transit Gateways API from Amazon Transit Gateway — 3 operation(s) for transit gateways.
+- [Amazon Transit Gateway VPC Attachments API](https://apis.io/apis/amazon-transit-gateway/amazon-transit-gateway-vpc-attachments-api/) — The VPC Attachments API from Amazon Transit Gateway — 1 operation(s) for vpc attachments.
 
-## APIs
+### Published properties
 
-### Amazon Transit Gateway REST API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-RESTful API for Amazon Transit Gateway operations including creating and managing transit gateways, VPC attachments, route tables, peering connections, and multicast domains.
+#### Agentic access (1)
 
-- **Human URL:** [https://aws.amazon.com/transit-gateway/](https://aws.amazon.com/transit-gateway/)
-- **Base URL:** `https://ec2.amazonaws.com`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Amazon Transit Gateway Agentic Access](https://apis.io/agentic-access/amazon-transit-gateway/amazon-transit-gateway-agentic-access/)
 
-- AWS
-- Networking
-- Transit Gateway
-- VPC
+#### JSON Schema (3)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/amazon-transit-gateway/refs/heads/main/openapi/amazon-transit-gateway-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](https://api.apis.guru/v2/specs/amazonaws.com/ec2/2016-11-15/openapi.yaml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [JSON Schema](json-schema/amazon-transit-gateway-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/amazon-transit-gateway-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Pricing](https://aws.amazon.com/transit-gateway/pricing/)
-- [Getting Started](https://aws.amazon.com/transit-gateway/getting-started/)
-- [Authentication](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html)
-- [S D Ks](https://aws.amazon.com/tools/)
-- [Status Page](https://status.aws.amazon.com/)
-- [F A Q](https://aws.amazon.com/transit-gateway/faqs/)
-- [Service Level Agreement](https://aws.amazon.com/ec2/sla/)
-- [User  Guide](https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html)
-- [API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/OperationList-query-tgw.html)
-- [Code  Examples](https://docs.aws.amazon.com/vpc/latest/tgw/TGW_Scenarios.html)
-- [Security](https://docs.aws.amazon.com/vpc/latest/tgw/tgw-security.html)
-- [Postman Collection](collections/amazon-transit-gateway.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/amazon-transit-gateway.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Amazon Transit Gateway](https://apis.io/schemas/amazon-transit-gateway/amazon-transit-gateway/)
+- [Tag](https://apis.io/schemas/amazon-transit-gateway/amazon-transit-gateway-tag/)
+- [TransitGateway](https://apis.io/schemas/amazon-transit-gateway/amazon-transit-gateway-transit-gateway/)
 
-## Common Properties
+#### JSON Structure (3)
 
-- [Portal](https://aws.amazon.com/)
+Data models expressed in JSON Structure.
+
+- [Amazon Transit Gateway Structure](https://apis.io/json-structure/amazon-transit-gateway/amazon-transit-gateway-structure/)
+- [Amazon Transit Gateway Tag Structure](https://apis.io/json-structure/amazon-transit-gateway/amazon-transit-gateway-tag-structure/)
+- [Amazon Transit Gateway Transit Gateway Structure](https://apis.io/json-structure/amazon-transit-gateway/amazon-transit-gateway-transit-gateway-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Transit Gateway Context](https://apis.io/jsonld/amazon-transit-gateway/amazon-transit-gateway-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Transit Gateway Vocabulary](https://apis.io/vocabularies/amazon-transit-gateway/amazon-transit-gateway-vocabulary/)
+
+#### Examples (1)
+
+Example requests and responses.
+
+- [Amazon Transit Gateway Example](https://apis.io/examples/amazon-transit-gateway/amazon-transit-gateway-example/)
+
+#### Collections (7)
+
+Postman and Open Collection request collections.
+
+- [Amazon Transit Gateway API](https://apis.io/collections/amazon-transit-gateway/open-amazon-transit-gateway/)
+- [Amazon Transit Gateway Route Tables API](https://apis.io/collections/amazon-transit-gateway/open-amazon-transit-gateway-route-tables-api/)
+- [Amazon Transit Gateway Route Tables Transit Gateways API](https://apis.io/collections/amazon-transit-gateway/open-amazon-transit-gateway-transit-gateways-api/)
+- [Amazon Transit Gateway Route Tables VPC Attachments API](https://apis.io/collections/amazon-transit-gateway/open-amazon-transit-gateway-vpc-attachments-api/)
+- [Amazon Transit Gateway Route Tables API](https://apis.io/collections/amazon-transit-gateway/postman-amazon-transit-gateway-route-tables-api/)
+- [Amazon Transit Gateway Route Tables Transit Gateways API](https://apis.io/collections/amazon-transit-gateway/postman-amazon-transit-gateway-transit-gateways-api/)
+- [Amazon Transit Gateway Route Tables VPC Attachments API](https://apis.io/collections/amazon-transit-gateway/postman-amazon-transit-gateway-vpc-attachments-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon Transit Gateway — jsonschema rules](https://apis.io/rules/amazon-transit-gateway/amazon-transit-gateway-jsonschema-spectral-rules/)
+- [Amazon Transit Gateway API Rules](https://apis.io/rules/amazon-transit-gateway/amazon-transit-gateway-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Transit Gateway Authentication](https://apis.io/security/amazon-transit-gateway/amazon-transit-gateway-authentication/)
+- [Amazon Transit Gateway Domain Security](https://apis.io/security/amazon-transit-gateway/amazon-transit-gateway-domain-security/)
+- [Amazon Transit Gateway Trust Center](https://apis.io/security/amazon-transit-gateway/amazon-transit-gateway-trust-center/)
+- [Amazon Transit Gateway Vulnerability Disclosure](https://apis.io/security/amazon-transit-gateway/amazon-transit-gateway-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Transit Gateway Plans Pricing](https://apis.io/plans/amazon-transit-gateway/amazon-transit-gateway-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Transit Gateway Rate Limits](https://apis.io/rate-limits/amazon-transit-gateway/amazon-transit-gateway-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Transit Gateway Finops](https://apis.io/finops/amazon-transit-gateway/amazon-transit-gateway-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://aws.amazon.com/transit-gateway/)
 - [Documentation](https://docs.aws.amazon.com/vpc/latest/tgw/)
-- [Terms of Service](https://aws.amazon.com/service-terms/)
-- [Privacy Policy](https://aws.amazon.com/privacy/)
+- [Pricing](https://aws.amazon.com/transit-gateway/pricing/)
 - [Support](https://aws.amazon.com/premiumsupport/)
 - [Blog](https://aws.amazon.com/blogs/networking-and-content-delivery/)
-- [GitHub Organization](https://github.com/aws)
-- [Console](https://console.aws.amazon.com/vpc/)
-- [Sign Up](https://signin.aws.amazon.com/signup?request_type=register)
-- [Login](https://aws.amazon.com/console/)
-- [Status Page](https://health.aws.amazon.com/health/status)
-- [Knowledge  Center](https://repost.aws/knowledge-center)
-- [YouTube](https://www.youtube.com/user/AmazonWebServices)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/aws-transit-gateway)
-- [Contact](https://aws.amazon.com/contact-us/)
-- [Spectral Rules](https://raw.githubusercontent.com/api-evangelist/amazon-transit-gateway/refs/heads/main/rules/amazon-transit-gateway-spectral-rules.yml)
-- [Vocabulary](https://raw.githubusercontent.com/api-evangelist/amazon-transit-gateway/refs/heads/main/vocabulary/amazon-transit-gateway-vocabulary.yaml)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](https://aws.amazon.com/partners/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**URL:** https://apievangelist.com
+**Kin Score 58.2** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 60.5 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 60.7 |
+| Access clarity | 67.1 |
+
+**Agent readiness 28.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-transit-gateway/](https://apis.io/providers/amazon-transit-gateway/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Transit Gateway: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-transit-gateway/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
