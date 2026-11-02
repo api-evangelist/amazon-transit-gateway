@@ -1,0 +1,61 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-09-20'
+method: searched
+source: https://aws.amazon.com/transit-gateway/pricing/
+sources:
+- https://aws.amazon.com/transit-gateway/pricing/
+provenance:
+  tool: planning/api-economics/harvest_pricing.py
+  run: 20260920T120546
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: usage-other
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-09-20'
+published: true
+note: Live pricing tables render via dynamic placeholders ({priceOf...}) so no per-region rates are in
+  the visible text; only the worked pricing example contains numeric prices ($0.1/hour, $0.05 per VPC
+  attachment, $0.02 per GB data processing, $0.04 total in peering example). Charges are per attachment-hour
+  plus per-GB data processed.
+plan_count: 2
+currency: USD
+plans:
+- name: Transit Gateway hourly charge (US East Ohio, pricing example)
+  price_text: $0.1 per hour ($0.05 per VPC attachment)
+  currency: USD
+  period: per-use
+  unit: hour / VPC attachment
+- name: Transit Gateway data processing (pricing example)
+  price_text: a charge of $0.02
+  price: 0.02
+  currency: USD
+  period: per-use
+  unit: per GB processed
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - hybrid
+  - metered
+  units:
+  - compute
+  - data
+  plans:
+  - name: Transit Gateway hourly charge (US East Ohio, pricing example)
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Transit Gateway data processing (pricing example)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
